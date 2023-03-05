@@ -69,9 +69,9 @@ function Pipelines() {
                     }}
                 />
                 <div className='absolute bottom-28 left-10 text-center'>
-                    <h3 className='text-xl'>
+                    <h3 className='lg:text-xl'>
                         Success rate <br />
-                        <span className='text-3xl font-semibold'>75%</span>
+                        <span className='text-3xl font-bold'>75%</span>
                     </h3>
                 </div>
             </div>

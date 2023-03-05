@@ -15,8 +15,10 @@ export default function Dashboard() {
     return (
 
         <div className='flex'>
-            <Sidebar />
-            <div className='px-5 lg:px-0 container mx-auto text-gray-800 py-20'>
+            <div className='w-full lg:w-[16%] hidden lg:block '>
+                <Sidebar />
+            </div>
+            <div className='w-full lg:w-[84%] px-5 lg:px-0 container mx-auto text-gray-800 py-20'>
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-7'>
                     <Pipelines />
                     <Language />
