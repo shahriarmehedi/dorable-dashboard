@@ -20,7 +20,7 @@ export default function Tips() {
             </div>
 
             <div className='p-5 flex flex-col gap-3'>
-                <div className='bg-white p-3 rounded-lg flex items-center'>
+                <div className='bg-white p-3 rounded-lg flex items-center gap-3'>
                     <picture className='w-[20%]'>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXblgXspg0u0XI2yniZQhp2fwX6C-wKB8WwA&usqp=CAU" className='w-7 h-7 rounded-md' alt="" />
                     </picture>
@@ -31,7 +31,7 @@ export default function Tips() {
                         </p>
                     </div>
                 </div>
-                <div className='bg-white p-3 rounded-lg flex items-center'>
+                <div className='bg-white p-3 rounded-lg flex items-center gap-3'>
                     <picture className='w-[20%]'>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXblgXspg0u0XI2yniZQhp2fwX6C-wKB8WwA&usqp=CAU" className='w-7 h-7 rounded-md' alt="" />
                     </picture>
@@ -42,7 +42,7 @@ export default function Tips() {
                         </p>
                     </div>
                 </div>
-                <div className='bg-white p-3 rounded-lg flex items-center'>
+                <div className='bg-white p-3 rounded-lg flex items-center gap-3'>
                     <picture className='w-[20%]'>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXblgXspg0u0XI2yniZQhp2fwX6C-wKB8WwA&usqp=CAU" className='w-7 h-7 rounded-md' alt="" />
                     </picture>
