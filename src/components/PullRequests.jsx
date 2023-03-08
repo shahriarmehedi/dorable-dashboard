@@ -22,14 +22,19 @@ ChartJS.register(
     Legend
 );
 
-function PullRequests() {
+function PullRequests({ Data }) {
+
+    const pullRequestData = Data.weekly.team_hulk.pull_requests
+
     return (
         <div className='bg-[#F5F6FE] rounded-xl p-5'>
             <h1 className='text-xl font-semibold mb-7'>Pull Requests</h1>
 
             <div>
                 <h1 className='text-lg font-semibold '>Total count of pull requests</h1>
-                <p className='text-3xl font-semibold '>1324</p>
+                <p className='text-3xl font-semibold '>
+                    {pullRequestData.total_count}
+                </p>
             </div>
 
             {/* Line chart */}

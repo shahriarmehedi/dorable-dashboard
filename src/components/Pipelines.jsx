@@ -6,36 +6,53 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 
 
-function Pipelines() {
+function Pipelines({ Data }) {
+
+
+    const pipelines = Data.weekly.team_hulk.pipelines
+
+    const total = parseInt(pipelines.total_successes) + parseInt(pipelines.total_failures)
+    const successPercentage = (parseInt(pipelines.total_successes) / total) * 100
+    const failurePercentage = (parseInt(pipelines.total_failures) / total) * 100
+
+    const successPercentagefixed = successPercentage.toFixed(0)
+
+
+
+
     return (
         <div className='bg-[#F5F6FE] rounded-xl p-5'>
-            <h1 className='text-xl font-semibold mb-7'>Pipelines</h1>
+            <h1 className='text-xl font-semibold mb-5'>Pipelines</h1>
             <div className='flex gap-5 mb-3'>
                 <div className='bg-white rounded-md p-3'>
                     <picture>
-                        <img src="https://cdn.pixabay.com/photo/2016/08/19/20/37/time-1606153__480.png" className='w-5 h-5' alt="" />
+                        <img src="/img/Group.svg" className='w-5 h-5' alt="" />
                     </picture>
                 </div>
                 <div>
-                    <h1 className='text-lg font-bold '>435 Hours</h1>
+                    <h1 className='text-lg font-bold '>
+                        {pipelines.total_time}
+                    </h1>
                     <p className='text-sm text-gray-400 '>Created 2 days ago</p>
                 </div>
             </div>
             <div className='flex gap-5'>
                 <div className='bg-white rounded-md p-3'>
                     <picture>
-                        <img src="https://cdn.pixabay.com/photo/2016/08/19/20/37/time-1606153__480.png" className='w-5 h-5' alt="" />
+                        <img src="/img/Group.svg" className='w-5 h-5' alt="" />
                     </picture>
                 </div>
                 <div>
-                    <h1 className='text-lg font-bold '>435 Hours</h1>
-                    <p className='text-sm text-gray-400 '>Created 2 days ago</p>
+                    <h1 className='text-lg font-bold '>
+                        {pipelines.average_duration}
+                    </h1>
+                    <p className='text-sm text-gray-400 '>Average duration</p>
                 </div>
             </div>
 
 
             {/* doughnut chart react-chartjs-2*/}
-            <div className='mt-2 relative w-2/3'>
+            <div className=' w-full mt-5'>
 
                 <Doughnut
                     data={{
@@ -43,39 +60,63 @@ function Pipelines() {
                         datasets: [
                             {
                                 label: 'Pipelines',
-                                data: [75, 18],
+                                data: [successPercentage, failurePercentage],
                                 backgroundColor: [
-                                    '#6B46C1',
-                                    '#FCD34D'
+                                    '#478938',
+                                    '#F84F50'
                                 ],
                                 borderColor: [
-                                    '#6B46C1',
-                                    '#FCD34D'
+                                    '#478938',
+                                    '#F84F50'
                                 ],
                                 borderWidth: 1,
                             },
                         ],
                     }}
 
+                    // height & width of the chart
+                    // width={200}
+                    // height={200}
+
                     options={{
-                        cutout: '82%',
-                        maintainAspectRatio: true,
+                        elements: {
+                            center: {
+                                text: '90%',
+                                sidePadding: 60
+                            }
+                        },
+
+                        cutout: '80%',
+                        maintainAspectRatio: false,
                         responsive: true,
                         plugins: {
                             legend: {
                                 position: 'right',
                             },
                         },
-                    }}
+
+                    }
+                    }
+
+                    plugins={[
+                        {
+                            id: 'textCenter',
+                            beforeDatasetsDraw: (chart) => {
+                                const { ctx } = chart;
+
+                                ctx.save();
+                                ctx.font = 'bolder 30px poppins';
+                                ctx.fillStyle = '#3D3E41';
+                                ctx.textAlign = 'center';
+                                ctx.textBaseline = 'middle';
+                                ctx.fillText(`${successPercentagefixed}%`, chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y);
+                                ctx.restore();
+                            }
+                        }
+                    ]}
                 />
-                <div className='absolute bottom-24 left-5 lg:left-6 text-center'>
-                    <h3 className='lg:text-lg'>
-                        Success rate <br />
-                        <span className='text-2xl font-bold'>75%</span>
-                    </h3>
-                </div>
             </div>
-        </div>
+        </div >
     )
 }
 

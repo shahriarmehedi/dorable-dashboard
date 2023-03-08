@@ -1,0 +1,441 @@
+{
+    "weekly": {
+        "team_hulk": {
+            "score": "elite",
+            "tips": [
+                {
+                    "name": "feature_branches",
+                    "tip": "Consider decreasing your incidents by adding feature branchs and require reviews."
+                },
+                {
+                    "name": "multi_environments",
+                    "tip": "Consider decreasing your incidents by adding multiple environments to CI/CD."
+                },
+                {
+                    "name": "trunk_based_development",
+                    "tip": "Consider using trunk based development to increase the time taken to get changes to production."
+                }
+            ],
+            "pipelines": {
+                "total_time": "435 hours",
+                "total_successes": "210",
+                "total_failures": "68",
+                "average_duration": "21 minutes"
+            },
+            "pull_requests": {
+                "total_count": "262",
+                "mean_time_to_review": "1.5 hours",
+                "average_life": "7.5 hours",
+                "stale_pull_requests": [
+                    {
+                        "title": "Adding middleware to user service",
+                        "link": "https://github.com/SennaSemakula/eth_batcher",
+                        "author": "Alice Combes",
+                        "open_duration": "19 days"
+                    },
+                    {
+                        "title": "Implement write replica db connection",
+                        "link": "https://github.com/SennaSemakula/eth_batcher",
+                        "author": "Bob Spice",
+                        "open_duration": "22 days"
+                    }
+                ]
+            },
+            "deployments": [
+                {
+                    "repository": "kitchen-sink",
+                    "author": "Alice Combes",
+                    "date": "05-12-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "production"
+                },
+                {
+                    "repository": "kitchen-middleware",
+                    "author": "Bob Spice",
+                    "date": "04-12-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "staging"
+                },
+                {
+                    "repository": "sidecar",
+                    "author": "Janice Cummins",
+                    "date": "03-12-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "production"
+                },
+                {
+                    "repository": "proxy-container",
+                    "author": "Fredrick Foo",
+                    "date": "03-12-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "production"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "Golang",
+                    "contributions": 104,
+                    "commits": 244,
+                    "percentage": 25,
+                    "color": "#F84F50"
+                },
+                {
+                    "language": "Javascript",
+                    "contributions": 512,
+                    "commits": 211,
+                    "percentage": 10,
+                    "color": "#33BFFA"
+                },
+                {
+                    "language": "C++",
+                    "contributions": 21,
+                    "commits": 5,
+                    "percentage": 45,
+                    "color": "#9F6BF2"
+                },
+                {
+                    "language": "Python",
+                    "contributions": 10042,
+                    "commits": 569,
+                    "percentage": 25,
+                    "color": "#478938"
+                }
+            ],
+            "worst_performing_repos": [
+                {
+                    "service": "kitchen-middleware",
+                    "average_build_time": "1h 20 mins",
+                    "incident_count": 34
+                },
+                {
+                    "service": "proxy-container",
+                    "average_build_time": "58 mins",
+                    "incident_count": 14
+                }
+            ]
+        },
+        "team_spiderman": {
+            "score": "low",
+            "tips": [
+                {
+                    "name": "feature_branches",
+                    "tip": "Consider decreasing your incidents by adding feature branchs and require reviews."
+                },
+                {
+                    "name": "multi_environments",
+                    "tip_name": "Consider decreasing your incidents by adding multiple environments to CI/CD."
+                },
+                {
+                    "name": "trunk_based_development",
+                    "tip_name": "Consider using trunk based development to increase the time taken to get changes to production."
+                }
+            ],
+            "pipelines": {
+                "total_time": "412 hours",
+                "total_successes": "184",
+                "total_failures": "43",
+                "average_duration": "25 minutes"
+            },
+            "pull_requests": {
+                "total_count": "262",
+                "mean_time_to_review": "1.5 hours",
+                "average_life": "7.5 hours",
+                "stale_pull_requests": [
+                    {
+                        "title": "Fix s3 connector kafka lag",
+                        "link": "https://github.com/SennaSemakula/eth_batcher",
+                        "author": "Bob Arun",
+                        "open_duration": "16 days"
+                    },
+                    {
+                        "title": "Add rollup in transactions",
+                        "link": "https://github.com/SennaSemakula/eth_batcher",
+                        "author": "Grenda Adams",
+                        "open_duration": "24 days"
+                    }
+                ]
+            },
+            "deployments": [
+                {
+                    "repository": "stream-handler",
+                    "author": "Grenda Adams",
+                    "date": "01-04-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "production"
+                },
+                {
+                    "repository": "s3-event-connector",
+                    "author": "Bob Arun",
+                    "date": "02-11-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "staging"
+                },
+                {
+                    "repository": "card-tx-proccessor",
+                    "author": "Oakly Fig",
+                    "date": "27-08-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "production"
+                },
+                {
+                    "repository": "proxy-container",
+                    "author": "James Hide",
+                    "date": "15-10-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "production"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "java",
+                    "contributions": 104,
+                    "commits": 244
+                },
+                {
+                    "language": "scala",
+                    "contributions": 512,
+                    "commits": 211
+                },
+                {
+                    "language": "typescript",
+                    "contributions": 10042,
+                    "commits": 569
+                },
+                {
+                    "language": "other",
+                    "contributions": 21,
+                    "commits": 5
+                }
+            ],
+            "worst_performing_repos": [
+                {
+                    "service": "card-tx-processor",
+                    "average_build_time": "1h 14 mins",
+                    "incident_count": 11
+                },
+                {
+                    "service": "s3-event-connector",
+                    "average_build_time": "42 mins",
+                    "incident_count": 7
+                }
+            ]
+        }
+    },
+    "monthly": {
+        "team_hulk": {
+            "score": "elite",
+            "tips": [
+                {
+                    "name": "feature_branches",
+                    "tip": "Consider decreasing your incidents by adding feature branchs and require reviews."
+                },
+                {
+                    "name": "multi_environments",
+                    "tip_name": "Consider decreasing your incidents by adding multiple environments to CI/CD."
+                },
+                {
+                    "name": "trunk_based_development",
+                    "tip_name": "Consider using trunk based development to increase the time taken to get changes to production."
+                }
+            ],
+            "pipelines": {
+                "total_time": "2491 hours",
+                "total_successes": "540",
+                "total_failures": "25",
+                "average_duration": "18 minutes"
+            },
+            "pull_requests": {
+                "total_count": "595",
+                "mean_time_to_review": "48 mins",
+                "average_life": "4 hours",
+                "stale_pull_requests": [
+                    {
+                        "title": "Adding middleware to user service",
+                        "link": "https://github.com/SennaSemakula/eth_batcher",
+                        "author": "Alice Combes",
+                        "open_duration": "45 days"
+                    },
+                    {
+                        "title": "Implement write replica db connection",
+                        "link": "https://github.com/SennaSemakula/eth_batcher",
+                        "author": "Bob Spice",
+                        "open_duration": "34 days"
+                    }
+                ]
+            },
+            "deployments": [
+                {
+                    "repository": "kitchen-sink",
+                    "author": "Alice Combes",
+                    "date": "05-12-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "production"
+                },
+                {
+                    "repository": "kitchen-middleware",
+                    "author": "Bob Spice",
+                    "date": "04-12-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "staging"
+                },
+                {
+                    "repository": "sidecar",
+                    "author": "Janice Cummins",
+                    "date": "03-12-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "production"
+                },
+                {
+                    "repository": "proxy-container",
+                    "author": "Fredrick Foo",
+                    "date": "03-12-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "production"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "golang",
+                    "contributions": 344,
+                    "commits": 324
+                },
+                {
+                    "language": "javascript",
+                    "contributions": 912,
+                    "commits": 255
+                },
+                {
+                    "language": "other",
+                    "contributions": 15,
+                    "commits": 5
+                },
+                {
+                    "language": "python",
+                    "contributions": 205,
+                    "commits": 18
+                }
+            ],
+            "worst_performing_repos": [
+                {
+                    "service": "kitchen-middleware",
+                    "average_build_time": "1h 20 mins",
+                    "incident_count": 7
+                },
+                {
+                    "service": "proxy-container",
+                    "average_build_time": "58 mins",
+                    "incident_count": 4
+                }
+            ]
+        },
+        "team_spiderman": {
+            "score": "medium",
+            "tips": [
+                {
+                    "name": "feature_branches",
+                    "tip": "Consider decreasing your incidents by adding feature branchs and require reviews."
+                },
+                {
+                    "name": "multi_environments",
+                    "tip_name": "Consider decreasing your incidents by adding multiple environments to CI/CD."
+                },
+                {
+                    "name": "trunk_based_development",
+                    "tip_name": "Consider using trunk based development to increase the time taken to get changes to production."
+                }
+            ],
+            "pipelines": {
+                "total_time": "1258 hours",
+                "total_successes": "467",
+                "total_failures": "124",
+                "average_duration": "34 minutes"
+            },
+            "pull_requests": {
+                "total_count": "471",
+                "mean_time_to_review": "2 hours",
+                "average_life": "5 hours",
+                "stale_pull_requests": [
+                    {
+                        "title": "Fix s3 connector kafka lag",
+                        "link": "https://github.com/SennaSemakula/eth_batcher",
+                        "author": "Bob Arun",
+                        "open_duration": "41 days"
+                    },
+                    {
+                        "title": "Add rollup in transactions",
+                        "link": "https://github.com/SennaSemakula/eth_batcher",
+                        "author": "Grenda Adams",
+                        "open_duration": "56 days"
+                    }
+                ]
+            },
+            "deployments": [
+                {
+                    "repository": "stream-handler",
+                    "author": "Grenda Adams",
+                    "date": "01-04-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "production"
+                },
+                {
+                    "repository": "s3-event-connector",
+                    "author": "Bob Arun",
+                    "date": "02-11-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "staging"
+                },
+                {
+                    "repository": "card-tx-proccessor",
+                    "author": "Oakly Fig",
+                    "date": "27-08-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "production"
+                },
+                {
+                    "repository": "proxy-container",
+                    "author": "James Hide",
+                    "date": "15-10-2022",
+                    "pull_request": "https://github.com/SennaSemakula/eth_batcher",
+                    "environment": "production"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "java",
+                    "contributions": 310,
+                    "commits": 542
+                },
+                {
+                    "language": "scala",
+                    "contributions": 642,
+                    "commits": 524
+                },
+                {
+                    "language": "typescript",
+                    "contributions": 252,
+                    "commits": 59
+                },
+                {
+                    "language": "other",
+                    "contributions": 42,
+                    "commits": 14
+                }
+            ],
+            "worst_performing_repos": [
+                {
+                    "service": "card-tx-processor",
+                    "average_build_time": "2h 14 mins",
+                    "incident_count": 45
+                },
+                {
+                    "service": "s3-event-connector",
+                    "average_build_time": "1h 2 mins",
+                    "incident_count": 38
+                }
+            ]
+        }
+    }
+}
+
+
+   

@@ -9,6 +9,8 @@ import StalePullRequest from '../components/StalePullRequest'
 import Tips from '../components/Tips'
 import Vulnerabilities from '../components/Vulnerabilities'
 import WordtPerformingRepos from '../components/WordtPerformingRepos'
+import Data from '../dashboard.json'
+
 
 
 export default function Dashboard() {
@@ -20,30 +22,30 @@ export default function Dashboard() {
             </div>
             <div className='w-full lg:w-[70%] px-5 lg:px-0 container mx-auto text-gray-800 py-20'>
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-7'>
-                    <Pipelines />
-                    <Language />
-                    <Tips />
+                    <Pipelines Data={Data} />
+                    <Language Data={Data} />
+                    <Tips Data={Data} />
                 </div>
                 <div className='flex flex-col lg:flex-row gap-7 mt-7'>
                     <div className='flex flex-col w-full lg:w-[66%]'>
                         <div className='grid grid-cols-2 gap-7'>
-                            <PullRequests />
-                            <ReviewTime />
+                            <PullRequests Data={Data} />
+                            <ReviewTime Data={Data} />
                         </div>
                         <div className='grid grid-cols-1 gap-7 w-full mt-7'>
-                            <Deployments />
+                            <Deployments Data={Data} />
                         </div>
 
                     </div>
                     <div className='w-full lg:w-[33%]'>
-                        <StalePullRequest />
+                        <StalePullRequest Data={Data} />
                     </div>
 
                 </div>
 
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-7 mt-7'>
-                    <WordtPerformingRepos />
-                    <Vulnerabilities />
+                    <WordtPerformingRepos Data={Data} />
+                    <Vulnerabilities Data={Data} />
                 </div>
             </div>
         </div>

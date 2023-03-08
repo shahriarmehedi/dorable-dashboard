@@ -6,68 +6,131 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 
 
-function Language() {
+function Language({ Data }) {
+
+    const languages = Data.weekly.team_hulk.languages
+
+    // create array og languages
+    const languagesArray = languages.map((language, index) => {
+        return language.language
+    })
+
+    // create array of percentage
+    const percentageArray = languages.map((language, index) => {
+        return language.percentage
+    })
+
+
+
     return (
         <div className='bg-[#F5F6FE] rounded-xl p-5'>
-            <h1 className='text-xl font-semibold mb-7'>Language</h1>
+            <h1 className='text-xl font-semibold mb-5'>Language</h1>
             <div className='flex gap-5 mb-3'>
                 <div className='bg-white rounded-md p-3'>
                     <picture>
-                        <img src="https://cdn.pixabay.com/photo/2016/08/19/20/37/time-1606153__480.png" className='w-5 h-5' alt="" />
+                        <img src="/img/Group 75.svg" className='w-5 h-5' alt="" />
                     </picture>
                 </div>
                 <div>
-                    <h1 className='text-lg font-bold '>11070</h1>
+                    <h1 className='text-lg font-bold '>
+                        {
+                            languages.reduce((acc, curr) => {
+                                return acc + curr.contributions
+                            }, 0)
+                        }
+                    </h1>
                     <p className='text-sm text-gray-400 '>Number of contribution</p>
                 </div>
             </div>
-            <div className='flex gap-5'>
-                <div>
+            <div className='grid grid-cols-2 gap-5'>
+                {
+                    languages.map((language, index) => {
+                        return (
+                            <div key={index} className="flex justify-between">
+                                <div className='flex items-center gap-2'>
+                                    {/* bullet circle */}
+                                    <div
+                                        style={{ backgroundColor: language.color }}
+                                        className=' rounded-full w-3 h-3'></div>
+                                    <h3>
+                                        <span className=''>
+                                            {language.language}
+                                        </span>
+                                    </h3>
+                                </div>
+                                <h4>
+                                    <span className='font-bold'>
+                                        {language.percentage}%
+                                    </span>
+                                </h4>
+                            </div>
+                        )
+                    })
+                }
 
-                </div>
+            </div>
+            <div className='flex gap-5 mt-3 mb-5'>
+
             </div>
 
 
             {/* doughnut chart react-chartjs-2*/}
-            <div className='mt-2 relative w-2/3'>
+            <div className='mt-5 mb-3 w-full'>
 
                 <Doughnut
                     data={{
-                        labels: ['Success', 'Failure'],
+                        labels: languagesArray,
                         datasets: [
                             {
-                                label: 'Pipelines',
-                                data: [75, 18],
+                                label: 'Language',
+                                data: percentageArray,
                                 backgroundColor: [
-                                    '#6B46C1',
-                                    '#FCD34D'
+                                    '#F84F50',
+                                    '#33BFFA',
+                                    '#9F6BF2',
+                                    '#478938'
                                 ],
                                 borderColor: [
-                                    '#6B46C1',
-                                    '#FCD34D'
+                                    '#F84F50',
+                                    '#33BFFA',
+                                    '#9F6BF2',
+                                    '#478938'
                                 ],
                                 borderWidth: 1,
                             },
                         ],
                     }}
 
+
+
                     options={{
                         cutout: '82%',
-                        maintainAspectRatio: true,
+                        maintainAspectRatio: false,
                         responsive: true,
                         plugins: {
                             legend: {
-                                position: 'right',
+                                display: false,
                             },
                         },
                     }}
+                    plugins={[
+                        {
+                            id: 'textCenter',
+                            beforeDatasetsDraw: (chart) => {
+                                const { ctx, data } = chart;
+
+                                ctx.save();
+                                ctx.font = 'bolder 30px poppins';
+                                ctx.fillStyle = '#3D3E41';
+                                ctx.textAlign = 'center';
+                                ctx.textBaseline = 'middle';
+                                ctx.fillText(`${data.datasets[0].data[0]}%`, chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y);
+                                ctx.restore();
+                            }
+                        }
+                    ]}
                 />
-                <div className='absolute bottom-24 left-6 text-center'>
-                    <h3 className='lg:text-lg'>
-                        Success rate <br />
-                        <span className='text-2xl font-bold'>75%</span>
-                    </h3>
-                </div>
+
             </div>
         </div>
     )
