@@ -56,7 +56,7 @@ const options = {
 
 const Deployments = () => {
     return (
-        <div className='bg-[#F5F6FE] rounded-xl p-5 relative'>
+        <div className='bg-[#F5F6FE] rounded-xl p-5 relative h-full'>
             <h1 className='text-xl font-semibold mb-7'>Deployments & Incidents</h1>
             <div className=' w-full pr-5'>
                 <Bar data={data} options={options} />

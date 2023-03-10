@@ -31,7 +31,7 @@ export default function Tips({ Data }) {
                                 <div className='w-[15%]'>
                                     <div className='bg-gray-100 p-1 flex justify-center items-center rounded-md h-10 w-10'>
                                         <picture className=''>
-                                            <img src="/img/feature.png" className='w-7 h-7 rounded-md' alt="" />
+                                            <img src="https://forencisdata.com/assets/img/icons/key.png" className='w-7 h-7 rounded-md' alt="" />
                                         </picture>
                                     </div>
                                 </div>

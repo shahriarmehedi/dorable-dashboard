@@ -19,7 +19,7 @@ export default function Header() {
                         <option>Monthly</option>
 
                     </select>
-                    <button className='bg-green-700 px-5 py-2 rounded-md text-white relative left-20'>
+                    <button className='bg-green-700 px-5 py-2 rounded-md text-white relative left-52'>
                         Elite
                     </button>
                 </div>
