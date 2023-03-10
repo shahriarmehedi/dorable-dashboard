@@ -10,7 +10,7 @@ export default function Tips({ Data }) {
             <div className="flex justify-between items-center px-5 pt-5">
                 <div className='flex items-center gap-2'>
                     <picture>
-                        <img src="https://i.pinimg.com/474x/74/09/08/740908747d3caf2959734fc10f36f0f4.jpg" className='w-7 h-7 rounded-md' alt="" />
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvR2L6BkA7G-ZvBZZuUPrFkHUIHz9GaPn28LjQH7JQxfFX14Z_Mjlf4bmmKaprtD3XX9g&usqp=CAU" className='w-7 h-7 rounded-md' alt="" />
                     </picture>
                     <div>
                         <h1 className='text-lg font-bold '>Tips</h1>
@@ -28,11 +28,15 @@ export default function Tips({ Data }) {
                     tips.map((tip, index) => {
                         return (
                             <div className='bg-white p-3 rounded-lg flex items-center gap-3'>
-                                <picture className='w-[20%]'>
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXblgXspg0u0XI2yniZQhp2fwX6C-wKB8WwA&usqp=CAU" className='w-7 h-7 rounded-md' alt="" />
-                                </picture>
+                                <div className='w-[15%]'>
+                                    <div className='bg-gray-100 p-1 flex justify-center items-center rounded-md h-10 w-10'>
+                                        <picture className=''>
+                                            <img src="/img/feature.png" className='w-7 h-7 rounded-md' alt="" />
+                                        </picture>
+                                    </div>
+                                </div>
                                 <div>
-                                    <h1 className='text-lg font-bold '>
+                                    <h1 className=' font-semibold '>
                                         {tip.name}
                                     </h1>
                                     <p className='text-xs text-gray-400'>

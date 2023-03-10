@@ -30,7 +30,7 @@ function Pipelines({ Data }) {
                     </picture>
                 </div>
                 <div>
-                    <h1 className='text-lg font-bold '>
+                    <h1 className='text-lg font-semibold '>
                         {pipelines.total_time}
                     </h1>
                     <p className='text-sm text-gray-400 '>Created 2 days ago</p>
@@ -43,7 +43,7 @@ function Pipelines({ Data }) {
                     </picture>
                 </div>
                 <div>
-                    <h1 className='text-lg font-bold '>
+                    <h1 className='text-lg font-semibold '>
                         {pipelines.average_duration}
                     </h1>
                     <p className='text-sm text-gray-400 '>Average duration</p>
@@ -52,7 +52,7 @@ function Pipelines({ Data }) {
 
 
             {/* doughnut chart react-chartjs-2*/}
-            <div className=' w-full mt-5'>
+            <div className=' w-full mt-[52px]'>
 
                 <Doughnut
                     data={{
@@ -79,6 +79,7 @@ function Pipelines({ Data }) {
                     // height={200}
 
                     options={{
+
                         elements: {
                             center: {
                                 text: '90%',
@@ -97,6 +98,7 @@ function Pipelines({ Data }) {
 
                     }
                     }
+
 
                     plugins={[
                         {

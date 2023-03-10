@@ -32,7 +32,7 @@ function Language({ Data }) {
                     </picture>
                 </div>
                 <div>
-                    <h1 className='text-lg font-bold '>
+                    <h1 className='text-lg font-semibold '>
                         {
                             languages.reduce((acc, curr) => {
                                 return acc + curr.contributions

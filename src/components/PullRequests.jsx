@@ -1,5 +1,3 @@
-// create a new component called PullRequests that will render a list of pull requests as a smooth line chart using reacrt-chartjs-2
-
 import { Line } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
@@ -27,7 +25,7 @@ function PullRequests({ Data }) {
     const pullRequestData = Data.weekly.team_hulk.pull_requests
 
     return (
-        <div className='bg-[#F5F6FE] rounded-xl p-5'>
+        <div className='bg-[#F5F6FE] h-full rounded-xl p-5'>
             <h1 className='text-xl font-semibold mb-7'>Pull Requests</h1>
 
             <div>
@@ -45,7 +43,7 @@ function PullRequests({ Data }) {
                         datasets: [
                             {
                                 label: 'Pull Requests',
-                                data: [75, 10, 75, 10, 75, 10, 75, 10, 75, 10, 75, 10],
+                                data: [55, 45, 40, 40, 45, 40, 45, 55, 40, 45, 35, 48],
                                 fill: true,
                                 backgroundColor: '#6B46C1',
                                 borderColor: '#6B46C1',

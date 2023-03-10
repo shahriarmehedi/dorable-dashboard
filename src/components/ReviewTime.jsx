@@ -25,7 +25,7 @@ ChartJS.register(
 function ReviewTime() {
     return (
         <div className='bg-[#F5F6FE] rounded-xl p-5'>
-            <h1 className='text-xl font-semibold mb-7'>Review Time</h1>
+            <h1 className='text-xl font-semibold mb-7'>Average Review Time</h1>
 
             <div>
                 <h1 className='text-lg font-semibold '>Average review time</h1>
