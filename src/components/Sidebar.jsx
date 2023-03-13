@@ -3,7 +3,7 @@ import React from 'react'
 export default function Sidebar() {
     return (
         <div className='hidden lg:block fixed h-screen w-[300px] bg-[#F5F6FE]'>
-            <div className='flex items-center justify-center h-20 mb-10'>
+            <div className='flex items-center justify-center h-16 mb-10'>
                 <img src='https://dorable.netlify.app/logo.png' className='h-10' alt='logo' />
             </div>
             <div className='flex flex-col gap-2'>

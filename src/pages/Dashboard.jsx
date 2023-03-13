@@ -9,7 +9,7 @@ import Sidebar from '../components/Sidebar'
 import StalePullRequest from '../components/StalePullRequest'
 import Tips from '../components/Tips'
 import Vulnerabilities from '../components/Vulnerabilities'
-import WordtPerformingRepos from '../components/WordtPerformingRepos'
+import WorstPerformingRepos from '../components/WorstPerformingRepos'
 import Data from '../dashboard.json'
 
 
@@ -21,7 +21,7 @@ export default function Dashboard() {
             <div className='w-full lg:w-[300px] hidden lg:block '>
                 <Sidebar />
             </div>
-            <div className='w-full ml-[100px] mr-[50px] px-5 lg:px-0 text-gray-800 py-20'>
+            <div className='w-full lg:ml-[100px] lg:mr-[50px] px-5 lg:px-0 text-gray-800 pb-20'>
                 <Header />
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-7'>
                     <Pipelines Data={Data} />
@@ -45,7 +45,7 @@ export default function Dashboard() {
                 </div>
 
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-7 mt-7'>
-                    <WordtPerformingRepos Data={Data} />
+                    <WorstPerformingRepos Data={Data} />
                     <Vulnerabilities Data={Data} />
                 </div>
             </div>

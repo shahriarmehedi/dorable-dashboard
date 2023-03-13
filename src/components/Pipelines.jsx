@@ -18,6 +18,13 @@ function Pipelines({ Data }) {
     const successPercentagefixed = successPercentage.toFixed(0)
 
 
+    const labels = [
+        //    success with percentage
+        `Success ${successPercentagefixed}%`,
+        `Failure ${failurePercentage.toFixed(0)}%`
+    ]
+
+
 
 
     return (
@@ -56,7 +63,7 @@ function Pipelines({ Data }) {
 
                 <Doughnut
                     data={{
-                        labels: ['Success', 'Failure'],
+                        labels: labels,
                         datasets: [
                             {
                                 label: 'Pipelines',
@@ -102,7 +109,8 @@ function Pipelines({ Data }) {
                                     borderRadius: 10,
                                     padding: 20,
                                     font: {
-                                        size: 12,
+                                        size: 14,
+                                        weight: 500,
                                         family: 'poppins',
                                         color: '#3D3E41'
                                     }

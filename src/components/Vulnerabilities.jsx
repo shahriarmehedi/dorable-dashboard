@@ -6,7 +6,7 @@ export default function Vulnerabilities() {
             <div className="flex justify-between items-center px-5 pt-5">
                 <div className='flex items-center gap-2'>
                     <picture>
-                        <img src="https://i.pinimg.com/474x/74/09/08/740908747d3caf2959734fc10f36f0f4.jpg" className='w-7 h-7 rounded-md' alt="" />
+                        {/* <img src="https://i.pinimg.com/474x/74/09/08/740908747d3caf2959734fc10f36f0f4.jpg" className='w-7 h-7 rounded-md' alt="" /> */}
                     </picture>
                     <div>
                         <h1 className='text-lg font-bold '>Vulnerabilities</h1>

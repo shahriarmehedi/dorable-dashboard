@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function WordtPerformingRepos() {
+export default function WorstPerformingRepos() {
     return (
         <div className='bg-[#F5F6FE] rounded-xl p-2 border-[4px] border-yellow-400 '>
             <div className="flex justify-between items-center px-5 pt-5">
                 <div className='flex items-center gap-2'>
                     <picture>
-                        <img src="https://i.pinimg.com/474x/74/09/08/740908747d3caf2959734fc10f36f0f4.jpg" className='w-7 h-7 rounded-md' alt="" />
+                        {/* <img src="https://i.pinimg.com/474x/74/09/08/740908747d3caf2959734fc10f36f0f4.jpg" className='w-7 h-7 rounded-md' alt="" /> */}
                     </picture>
                     <div>
                         <h1 className='text-lg font-bold '>Worst Performing Repos</h1>

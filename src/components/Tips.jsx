@@ -10,7 +10,7 @@ export default function Tips({ Data }) {
             <div className="flex justify-between items-center px-5 pt-5">
                 <div className='flex items-center gap-2'>
                     <picture>
-                        <img src="https://purepng.com/public/uploads/large/purepng.com-tips-iconsymbolsiconsapple-iosiosios-8-iconsios-8-7215225961248jtx5.png" className='w-7 h-7 rounded-md' alt="" />
+                        <img src="https://icon-library.com/images/green-round-lamp-bulb-light-lighting-512.png" className='w-7 h-7 rounded-md' alt="" />
                     </picture>
                     <div>
                         <h1 className='text-lg font-bold '>Tips</h1>
@@ -31,7 +31,7 @@ export default function Tips({ Data }) {
                                 <div className='w-[15%]'>
                                     <div className='flex justify-center items-center rounded-md'>
                                         <picture className=''>
-                                            <img src="https://forencisdata.com/assets/img/icons/key.png" className='w-10 h-10' alt="" />
+                                            <img src="https://img.icons8.com/color/100/work-authorisation.png" className='w-10 h-10' alt="" />
                                         </picture>
                                     </div>
                                 </div>
