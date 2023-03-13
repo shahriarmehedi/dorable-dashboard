@@ -52,7 +52,7 @@ function Pipelines({ Data }) {
 
 
             {/* doughnut chart react-chartjs-2*/}
-            <div className=' w-full mt-[52px]'>
+            <div className=' w-full mt-[40px]'>
 
                 <Doughnut
                     data={{
@@ -70,13 +70,16 @@ function Pipelines({ Data }) {
                                     '#F84F50'
                                 ],
                                 borderWidth: 1,
+                                borderAlign: 'inner',
+                                borderRadius: 10,
+
                             },
                         ],
                     }}
 
-                    // height & width of the chart
-                    // width={200}
-                    // height={200}
+
+
+
 
                     options={{
 
@@ -93,6 +96,17 @@ function Pipelines({ Data }) {
                         plugins: {
                             legend: {
                                 position: 'right',
+                                labels: {
+                                    boxWidth: 7,
+                                    boxHeight: 7,
+                                    borderRadius: 10,
+                                    padding: 20,
+                                    font: {
+                                        size: 12,
+                                        family: 'poppins',
+                                        color: '#3D3E41'
+                                    }
+                                },
                             },
                         },
 

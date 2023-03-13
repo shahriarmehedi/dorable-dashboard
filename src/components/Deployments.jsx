@@ -2,24 +2,33 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2';
 
 const data = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    labels: [
+        // 40 labels
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40'
+    ],
     datasets: [
         {
             type: 'bar',
             label: 'Incidents',
             data: [
-                10, 5, 7, 2, 9, 12, 6, 10, 5, 7, 2, 9, 12, 6, 10, 5, 7, 2, 9, 12, 6, 10, 5, 7, 2, 9, 12, 6, 10, 5, 7, 2, 9, 12, 6, 10, 5, 7, 2, 9
+                5, 5, 2, 2, 1, 3, 6, 5, 5, 2, 2, 1, 3, 6, 5, 5, 2, 2, 1, 3, 6, 5, 5, 7, 2, 1, 3, 6, 5, 5, 2, 2, 1, 7, 6, 5, 5, 2, 2, 1
             ],
             // yellow color
-            backgroundColor: 'rgb(255, 205, 86)',
+            backgroundColor: '#EFDB70',
+            borderColor: '#EFDB70',
+            borderWidth: 1,
+            fill: true,
+            borderRadius: 10,
         },
         {
             type: 'line',
             label: 'Deployments',
             data: [
-                12, 8, 15, 10, 17, 10, 13, 12, 8, 15, 10, 17, 10, 13, 12, 8, 15, 10, 17, 20, 13, 12, 8, 15, 10, 17, 10, 13, 15, 10, 17, 20, 13, 12, 8, 15, 10, 17, 10, 13
+                7, 8, 9, 10, 11, 10, 13, 12, 8, 10, 10, 11, 10, 11, 12, 8, 15, 10, 11, 10, 13, 12, 8, 11, 10, 11, 10, 11, 11, 10, 11, 10, 13, 12, 8, 11, 10, 11, 10, 11
             ],
-            borderColor: 'rgb(75, 192, 192)',
+            borderColor: '#24365A',
+            backgroundColor: '#24365A',
+            ShadowRoot: 10,
             fill: false,
         },
     ],
@@ -27,6 +36,7 @@ const data = {
 
 const options = {
     tension: 0.5,
+    pointRadius: 0,
     scales: {
         x: {
             ticks: {
@@ -50,6 +60,18 @@ const options = {
     plugins: {
         legend: {
             position: 'top',
+            labels: {
+                boxWidth: 7,
+                boxHeight: 7,
+                borderRadius: 10,
+                padding: 20,
+                font: {
+                    size: 12,
+                    family: 'poppins',
+                    color: '#3D3E41'
+                }
+            },
+
         },
     },
 };

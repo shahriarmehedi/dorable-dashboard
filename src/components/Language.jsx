@@ -42,11 +42,11 @@ function Language({ Data }) {
                     <p className='text-sm text-gray-400 '>Number of contribution</p>
                 </div>
             </div>
-            <div className='grid grid-cols-2 gap-5'>
+            <div className='grid grid-cols-2 gap-4 mt-3'>
                 {
                     languages.map((language, index) => {
                         return (
-                            <div key={index} className="flex justify-between">
+                            <div key={index} className="flex justify-between text-sm">
                                 <div className='flex items-center gap-2'>
                                     {/* bullet circle */}
                                     <div
@@ -59,7 +59,7 @@ function Language({ Data }) {
                                     </h3>
                                 </div>
                                 <h4>
-                                    <span className='font-bold'>
+                                    <span className='font-semibold'>
                                         {language.percentage}%
                                     </span>
                                 </h4>
@@ -97,6 +97,8 @@ function Language({ Data }) {
                                     '#478938'
                                 ],
                                 borderWidth: 1,
+                                borderAlign: "inner",
+                                borderRadius: 10,
                             },
                         ],
                     }}

@@ -25,12 +25,11 @@ function PullRequests({ Data }) {
     const pullRequestData = Data.weekly.team_hulk.pull_requests
 
     return (
-        <div className='bg-[#F5F6FE] h-full rounded-xl p-5'>
-            <h1 className='text-xl font-semibold mb-7'>Pull Requests</h1>
+        <div className='bg-[#F5F6FE] h-full rounded-xl px-5 pt-5 pb-2'>
+            <h1 className='text-xl font-semibold mb-5'>Total Count of Pull Requests</h1>
 
             <div>
-                <h1 className='text-lg font-semibold '>Total count of pull requests</h1>
-                <p className='text-3xl font-semibold '>
+                <p className='text-3xl font-semibold text-[#112D5A] '>
                     {pullRequestData.total_count}
                 </p>
             </div>
@@ -45,8 +44,9 @@ function PullRequests({ Data }) {
                                 label: 'Pull Requests',
                                 data: [55, 45, 40, 40, 45, 40, 45, 55, 40, 45, 35, 48],
                                 fill: true,
-                                backgroundColor: '#6B46C1',
-                                borderColor: '#6B46C1',
+
+                                backgroundColor: '#53BAE5',
+                                borderColor: '#53BAE5',
                             },
                         ],
                     }}

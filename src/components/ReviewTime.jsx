@@ -24,12 +24,13 @@ ChartJS.register(
 
 function ReviewTime() {
     return (
-        <div className='bg-[#F5F6FE] rounded-xl p-5'>
-            <h1 className='text-xl font-semibold mb-7'>Average Review Time</h1>
+        <div className='bg-[#F5F6FE] rounded-xl px-5 pt-5 pb-2'>
+            <h1 className='text-xl font-semibold mb-5'>Average Review Time</h1>
 
             <div>
-                <h1 className='text-lg font-semibold '>Average review time</h1>
-                <p className='text-3xl font-semibold '>2 hours</p>
+                <p className='text-3xl font-semibold text-[#112D5A] '>
+                    2 hours
+                </p>
             </div>
 
             {/* Bar chart */}
@@ -39,20 +40,21 @@ function ReviewTime() {
                         labels:
                             // 20 lebels
                             ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
-                                'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+                                'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',],
 
                         datasets: [
                             {
                                 label: 'Review Time',
                                 data: [
                                     // 20 data points
-                                    23, 19, 3, 5, 2, 3, 20, 3, 5, 2, 3, 20,
-                                    23, 19, 3, 5, 2, 3, 20, 3
+                                    9, 10, 3, 5, 2, 3, 12, 3, 5, 2, 3, 8,
+                                    15, 5, 3, 5, 2, 3, 9, 3, 5, 2, 3, 7,
 
                                 ],
                                 fill: true,
-                                backgroundColor: '#6B46C1',
-                                borderColor: '#6B46C1',
+                                backgroundColor: '#BDE4FF',
+                                borderColor: '#BDE4FF',
+                                borderRadius: 10,
                             },
                         ],
                     }}
